@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=PT+Sans+Caption&family=Pacifico&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./bookmark-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css/all.min.css">
+    <link rel="stylesheet" href="./style.css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="layer1">
+        <h1>Bookmarker</h1>
+    </div>
+    <hr>
+    <!-- inputs field title-->
+<div class="container my-5 mx-auto">
+<div class="header">
+    <h2 class="text-center">
+        
+            <i class="header-icon fa-solid fa-bookmark"></i>
+        
+
+        Bookmark your favorite sites
+        <i class="header-icon2 fa-solid fa-bookmark"></i>
+    </h2>
+
+</div>          
+    <!-- inputs fields -->
+    
+    <div class="websitename my-2"> 
+        
+        <!-- web site name -->
+        <label for="webSiteName" class="pb-2">
+            <span><i class="fa-solid fa-book-bookmark"></i></span>     
+            Site Name
+        </label>
+        
+        <input id="webSiteName" oninput="validateName()" class="form-control" type="text" placeholder="Bookmark Name">
+        <p id="massegeName" class="alert alert-danger d-none">invalid input</p>
+    </div>
+    <!-- second input -->
+    <div class="websiteurl">
+        <!-- web site url -->
+        <span><i class="fa-solid fa-link"></i></span>
+        <label for="webSiteUrl">Site Url</label>
+        <input id="webSiteUrl" oninput="validateUrl()" class="form-control" type="url" placeholder="Website Url" >
+        <p id="massegeUrl" class="alert alert-danger d-none">invalid input</p>
+    </div>
+<button onclick="addinfo()" class="btn btn-submit text-center m-2">Submit</button>
+
+</div>
+
+<hr class="m-auto">
+<div class=" Crud w-75 mx-auto my-3 bg-light">
+    <table class="table text-center ">
+        <thead>
+            <th>index</th>
+            <th>website</th>
+            <th>visit</th>
+            <th>delete</th>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
